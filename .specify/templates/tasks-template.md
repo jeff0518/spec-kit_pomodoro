@@ -1,5 +1,4 @@
 ---
-
 description: "任務清單模板，用於功能實作"
 ---
 
@@ -38,21 +37,21 @@ description: "任務清單模板，用於功能實作"
 - [ ] **效能驗證**: 關鍵路徑包含效能測試任務
 - [ ] **語言一致性**: 所有文件和使用者介面文字使用繁體中文
 
-<!-- 
+<!--
   ============================================================================
   重要：以下任務為範例任務，僅用於說明目的。
-  
+
   /speckit.tasks 命令必須基於以下內容替換為實際任務：
   - 來自 spec.md 的使用者故事（及其優先級 P1, P2, P3...）
   - 來自 plan.md 的功能需求
   - 來自 data-model.md 的實體
   - 來自 contracts/ 的端點
-  
+
   任務必須按使用者故事組織，以便每個故事可以：
   - 獨立實作
   - 獨立測試
   - 作為 MVP 增量交付
-  
+
   不要在生成的 tasks.md 檔案中保留這些範例任務。
   ============================================================================
 -->
@@ -96,8 +95,8 @@ description: "任務清單模板，用於功能實作"
 
 > **注意：先撰寫這些測試，確保在實作前失敗**
 
-- [ ] T010 [P] [US1] 在 tests/contract/test_[name].py 中為 [端點] 建立合約測試
-- [ ] T011 [P] [US1] 在 tests/integration/test_[name].py 中為 [使用者旅程] 建立整合測試
+- [ ] T010 [P] [US1] 在 tests/contract/test\_[name].py 中為 [端點] 建立合約測試
+- [ ] T011 [P] [US1] 在 tests/integration/test\_[name].py 中為 [使用者旅程] 建立整合測試
 
 ### 使用者故事 1 的實作
 
@@ -120,8 +119,8 @@ description: "任務清單模板，用於功能實作"
 
 ### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T018 [P] [US2] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T019 [P] [US2] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T018 [P] [US2] Contract test for [endpoint] in tests/contract/test\_[name].py
+- [ ] T019 [P] [US2] Integration test for [user journey] in tests/integration/test\_[name].py
 
 ### Implementation for User Story 2
 
@@ -142,8 +141,8 @@ description: "任務清單模板，用於功能實作"
 
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T024 [P] [US3] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T025 [P] [US3] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T024 [P] [US3] Contract test for [endpoint] in tests/contract/test\_[name].py
+- [ ] T025 [P] [US3] Integration test for [user journey] in tests/integration/test\_[name].py
 
 ### Implementation for User Story 3
 
