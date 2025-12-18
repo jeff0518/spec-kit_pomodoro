@@ -1,101 +1,114 @@
 ---
 
-description: "Task list template for feature implementation"
+description: "任務清單模板，用於功能實作"
 ---
 
-# Tasks: [FEATURE NAME]
+# 任務清單: [FEATURE NAME]
 
-**Input**: Design documents from `/specs/[###-feature-name]/`
-**Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
+**輸入**: 來自 `/specs/[###-feature-name]/` 的設計文件
+**前置需求**: plan.md (必需), spec.md (使用者故事必需), research.md, data-model.md, contracts/
 
-**Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
+**注意**：本文件必須使用繁體中文（zh-TW）撰寫，遵循專案憲章的語言要求。
 
-**Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
+**測試**: 以下範例包含測試任務。測試為選擇性 - 僅在功能規格中明確要求時才包含它們。
 
-## Format: `[ID] [P?] [Story] Description`
+**組織方式**: 任務按使用者故事分組，以實現每個故事的獨立實作和測試。
 
-- **[P]**: Can run in parallel (different files, no dependencies)
-- **[Story]**: Which user story this task belongs to (e.g., US1, US2, US3)
-- Include exact file paths in descriptions
+## 格式: `[ID] [P?] [Story] 描述`
 
-## Path Conventions
+- **[P]**: 可平行執行（不同檔案，無相依性）
+- **[Story]**: 此任務屬於哪個使用者故事（例如 US1, US2, US3）
+- 在描述中包含確切的檔案路徑
 
-- **Single project**: `src/`, `tests/` at repository root
-- **Web app**: `backend/src/`, `frontend/src/`
-- **Mobile**: `api/src/`, `ios/src/` or `android/src/`
-- Paths shown below assume single project - adjust based on plan.md structure
+## 路徑慣例
+
+- **單一專案**: 儲存庫根目錄的 `src/`, `tests/`
+- **網頁應用**: `backend/src/`, `frontend/src/`
+- **行動應用**: `api/src/`, `ios/src/` 或 `android/src/`
+- 以下顯示的路徑假設為單一專案 - 根據 plan.md 結構調整
+
+## 憲章合規性檢查清單
+
+在開始實作前，確認任務遵循以下憲章要求：
+
+- [ ] **程式碼品質**: 任務包含模組化設計、清晰命名、程式碼審查步驟
+- [ ] **測試優先**: 測試任務在實作任務之前排序
+- [ ] **測試覆蓋率**: 核心功能包含單元測試和整合測試
+- [ ] **使用者體驗**: UI 相關任務參考設計系統和可訪問性標準
+- [ ] **效能驗證**: 關鍵路徑包含效能測試任務
+- [ ] **語言一致性**: 所有文件和使用者介面文字使用繁體中文
 
 <!-- 
   ============================================================================
-  IMPORTANT: The tasks below are SAMPLE TASKS for illustration purposes only.
+  重要：以下任務為範例任務，僅用於說明目的。
   
-  The /speckit.tasks command MUST replace these with actual tasks based on:
-  - User stories from spec.md (with their priorities P1, P2, P3...)
-  - Feature requirements from plan.md
-  - Entities from data-model.md
-  - Endpoints from contracts/
+  /speckit.tasks 命令必須基於以下內容替換為實際任務：
+  - 來自 spec.md 的使用者故事（及其優先級 P1, P2, P3...）
+  - 來自 plan.md 的功能需求
+  - 來自 data-model.md 的實體
+  - 來自 contracts/ 的端點
   
-  Tasks MUST be organized by user story so each story can be:
-  - Implemented independently
-  - Tested independently
-  - Delivered as an MVP increment
+  任務必須按使用者故事組織，以便每個故事可以：
+  - 獨立實作
+  - 獨立測試
+  - 作為 MVP 增量交付
   
-  DO NOT keep these sample tasks in the generated tasks.md file.
+  不要在生成的 tasks.md 檔案中保留這些範例任務。
   ============================================================================
 -->
 
-## Phase 1: Setup (Shared Infrastructure)
+## 階段 1: 設定（共享基礎設施）
 
-**Purpose**: Project initialization and basic structure
+**目的**: 專案初始化和基本結構
 
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
-
----
-
-## Phase 2: Foundational (Blocking Prerequisites)
-
-**Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
-
-**⚠️ CRITICAL**: No user story work can begin until this phase is complete
-
-Examples of foundational tasks (adjust based on your project):
-
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
-
-**Checkpoint**: Foundation ready - user story implementation can now begin in parallel
+- [ ] T001 根據實作計畫建立專案結構
+- [ ] T002 初始化 [語言] 專案及 [框架] 相依套件
+- [ ] T003 [P] 配置 linting 和格式化工具
 
 ---
 
-## Phase 3: User Story 1 - [Title] (Priority: P1) 🎯 MVP
+## 階段 2: 基礎（阻塞前置條件）
 
-**Goal**: [Brief description of what this story delivers]
+**目的**: 在實作任何使用者故事之前必須完成的核心基礎設施
 
-**Independent Test**: [How to verify this story works on its own]
+**⚠️ 關鍵**: 在此階段完成前，不能開始任何使用者故事工作
 
-### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
+基礎任務範例（根據你的專案調整）：
 
-> **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
+- [ ] T004 設定資料庫 schema 和遷移框架
+- [ ] T005 [P] 實作認證/授權框架
+- [ ] T006 [P] 設定 API 路由和中介軟體結構
+- [ ] T007 建立所有故事依賴的基礎模型/實體
+- [ ] T008 配置錯誤處理和日誌記錄基礎設施
+- [ ] T009 設定環境配置管理
 
-- [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
+**檢查點**: 基礎就緒 - 使用者故事實作現在可以平行開始
 
-### Implementation for User Story 1
+---
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+## 階段 3: 使用者故事 1 - [標題] (優先級: P1) 🎯 MVP
 
-**Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
+**目標**: [此故事提供什麼的簡短描述]
+
+**獨立測試**: [如何獨立驗證此故事有效]
+
+### 使用者故事 1 的測試（選擇性 - 僅在要求測試時） ⚠️
+
+> **注意：先撰寫這些測試，確保在實作前失敗**
+
+- [ ] T010 [P] [US1] 在 tests/contract/test_[name].py 中為 [端點] 建立合約測試
+- [ ] T011 [P] [US1] 在 tests/integration/test_[name].py 中為 [使用者旅程] 建立整合測試
+
+### 使用者故事 1 的實作
+
+- [ ] T012 [P] [US1] 在 src/models/[entity1].py 中建立 [Entity1] 模型
+- [ ] T013 [P] [US1] 在 src/models/[entity2].py 中建立 [Entity2] 模型
+- [ ] T014 [US1] 在 src/services/[service].py 中實作 [Service]（依賴 T012, T013）
+- [ ] T015 [US1] 在 src/[location]/[file].py 中實作 [端點/功能]
+- [ ] T016 [US1] 新增驗證和錯誤處理
+- [ ] T017 [US1] 為使用者故事 1 的操作新增日誌記錄
+
+**檢查點**: 此時，使用者故事 1 應完全可用且可獨立測試
 
 ---
 

@@ -31,7 +31,17 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+根據 `.specify/memory/constitution.md` 檢查以下合規性要求：
+
+- [ ] **程式碼品質**：確認實作將遵循模組化設計、命名規範、程式碼審查流程
+- [ ] **測試標準**：確認測試優先方法（TDD）、測試覆蓋率目標（80%+）、整合測試需求
+- [ ] **使用者體驗**：確認將遵循設計系統、互動一致性、可訪問性標準（WCAG 2.1 AA）
+- [ ] **效能要求**：確認響應時間目標（API < 500ms p95, UI < 100ms）、資源使用限制、效能測試計畫
+- [ ] **語言要求**：確認所有規格文件、計畫、使用者文件將使用繁體中文（zh-TW）撰寫
+
+**違規與正當理由**（如適用）：
+
+[如有任何無法遵守憲章的情況，在此記錄理由和批准情況]
 
 ## Project Structure
 
